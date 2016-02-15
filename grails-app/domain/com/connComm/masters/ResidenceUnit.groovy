@@ -16,7 +16,7 @@ class ResidenceUnit {
 
 		version false
 		columns {
-			communityMaster column:'community_master_id'
+			communityMaster column:'COMMUNITY_ID'
 		}
 	}
 
