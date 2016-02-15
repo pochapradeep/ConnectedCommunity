@@ -6,12 +6,17 @@ class ResidentProof {
 	byte[] idProofDoc
 	String addressProofDocName
 	byte[] addressProofDoc
-	ResidentMaster residentMaster
+	CommunityPendingRegistration communityPendingRegistration
 
-	static belongsTo = [ResidentMaster]
+	static belongsTo = [CommunityPendingRegistration]
 
 	static mapping = {
 		id column: "resident_proof_id", generator: "increment"
+		
+		columns {
+			communityPendingRegistration column:'community_pending_registration_id'
+		}
+		
 		version false
 	}
 }

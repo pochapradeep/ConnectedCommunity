@@ -12,6 +12,9 @@ class Role {
 
 	static mapping = {
 		id column: "ROLE_ID", generator: "increment"
+		columns {
+			communityMaster column:'community_id'
+		}
 		version false
 	}
 

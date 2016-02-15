@@ -10,9 +10,12 @@ class CommunityPendingRegistration {
 	Date codeExpiryDate
 	Role role
 	CommunityMaster communityMaster
+	ResidenceUnit residenceUnit
 
 	static belongsTo = [CommunityMaster, Role]
 
+	static hasMany = [residentProof: ResidentProof]
+	
 	static mapping = {
 		id column: "community_pending_registration_id", generator: "increment"
 		communityMaster column:'community_id'
@@ -23,6 +26,7 @@ class CommunityPendingRegistration {
 		phone column: 'phone'
 		codeExpiryDate column: 'code_expiry_date'
 		role column:'role_id'
+		residenceUnit column: 'RESIDENCE_UNIT_ID'
 		version false
 	}
 	

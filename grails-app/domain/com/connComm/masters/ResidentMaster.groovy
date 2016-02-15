@@ -12,7 +12,6 @@ class ResidentMaster {
 
 	static hasMany = [residentCustomFieldValueses: ResidentCustomFieldValues,
 	                  residentLocations: ResidentLocation,
-	                  residentProofs: ResidentProof,
 	                  residentRelationMappingsForPrimaryResidentId: ResidentRelationMapping,
 	                  residentRelationMappingsForSecondaryResidentId: ResidentRelationMapping,
 	                  sellBuyMastersForBuyerId: SellBuyMaster,
@@ -34,6 +33,10 @@ class ResidentMaster {
 	
 	static mapping = {
 		id column: "RESIDENT_MASTER_ID", generator: "increment"
+		
+		columns {
+			communityMaster column:'community_id'
+		}
 		version false
 	}
 }
