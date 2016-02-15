@@ -13,6 +13,10 @@ class ResidentCustomField {
 	static mapping = {
 		id column: "RESIDENT_CUSTOM_FIELD_ID", generator: "increment"
 		version false
+		
+		columns {
+			communityMaster column:'community_id'
+		}
 	}
 
 	static constraints = {

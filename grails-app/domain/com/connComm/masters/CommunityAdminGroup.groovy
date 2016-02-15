@@ -10,6 +10,9 @@ class CommunityAdminGroup {
 
 	static mapping = {
 		id column: "COMMUNITY_ADMIN_GROUP_ID", generator: "increment"
+		communityMaster column : 'COMMUNITY_ID'
+		adminPriorityOrder column: 'ADMIN_PRIORITY_ORDER'
+		users column : 'USERS_ID'
 		version false
 	}
 }
