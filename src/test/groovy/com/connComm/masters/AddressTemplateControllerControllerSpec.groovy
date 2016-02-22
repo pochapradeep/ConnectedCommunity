@@ -3,7 +3,7 @@ package com.connComm.masters
 import grails.test.mixin.*
 import spock.lang.*
 
-@TestFor(AddressTemplateControllerController)
+@TestFor(AddressTemplateController)
 @Mock(AddressTemplateController)
 class AddressTemplateControllerControllerSpec extends Specification {
 

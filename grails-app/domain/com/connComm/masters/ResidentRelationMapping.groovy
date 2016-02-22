@@ -15,7 +15,7 @@ class ResidentRelationMapping implements Serializable {
 		
 		columns {
 			residentMasterByPrimaryResidentId column:'resident_master_id'
-			residentMasterBySecondaryResidentId column:'resident_master_id'
+			residentMasterBySecondaryResidentId column:'resident_master_id', updateable: false, insertable: false
 		}
 		version false
 	}
